@@ -1,5 +1,5 @@
 # Calculadora y Sistema de Gestión de Usuarios
-
+![alt text](image.png)
 Este proyecto es una aplicación web que combina una calculadora funcional con un sistema de gestión de usuarios. La aplicación permite realizar cálculos matemáticos simples y almacenar información de usuarios en un diseño interactivo y visualmente atractivo.
 
 ---
