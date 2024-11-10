@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+.container h3 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: auto;
+  text-align: center;
+}
+
+.calculadora {
+  display: flex;
+  padding: 6px;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  width: 320px;
+  height: 480px;
+  background-color: #202020;
+  box-shadow: 2px 2px 5px #2c2b2b;
+}
+
+.calculadora input {
+  width: 100%;
+  background-color: inherit;
+  text-align: end;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgb(28, 28, 30);
+  box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding-right: 10px;
+  margin: 1rem;
+  transition: 0.4s;
+}
+
+.calculadora button {
+  padding: 5px;
+  width: 70px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: #202020;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: none;
+}
+.calculadora .numeros,
+.calculadora .simbolos,
+.calculadora .simbolo-igual {
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #3c3c3c;
+  border: none;
+  outline: none;
+  color: #0781f3;
+  cursor: pointer;
+  padding: 12px 24px;
+  position: relative;
+  line-height: 24px;
+  border-radius: 9px;
+  box-shadow: 0px 1px 2px #2b3044, 0px 4px 16px #2b3044;
+  transform: perspective(600px) rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+  transition: none; /* Elimina la transición y el escalado */
+}
+.calculadora button:hover {
+  background-color: #3c3c3c;
+  box-shadow: 0px 1px 2px #2b3044, 0px 4px 16px #2b3044;
+  transform: none; /* Elimina el escalado al pasar el cursor */
+  transition: none;
+}
+
+.calculadora input:hover {
+  border: 1px solid white;
+}
+
+.calculadora .simbolo-igual {
+  background-color: #c891d1;
+  color: #202020;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  position: relative;
+  line-height: 24px;
+  border-radius: 9px;
+  box-shadow: 0px 1px 2px #2b3044, 0px 4px 16px #2b3044;
+  transform-style: preserve-3d;
+  transform: scale(var(--s, 1)) perspective(600px) rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+  perspective: 600px;
+  transition: transform 0.1s;
+  font-weight: 700;
+}
+
+.appbar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.appbar-title {
+  width: 50%;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.appbar-btn {
+  display: flex;
+  top: 1px;
+  right: 10px;
+  position: absolute;
+  width: 30%;
+  align-items: end;
+  justify-content: end;
+  gap: 10px;
+}
+
+.appbar-btn button {
+  width: 20px;
+  color: #396bf3;
+  width: 8.5rem;
+  height: 2.9em;
+  border: none;
+}
+
+.todoList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  width: 68%;
+  height: auto;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #ccc;
+  align-items: center;
+  position: relative;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #94a3b8;
+}
+
+.input {
+  width: 100%;
+  height: 45px;
+  padding-left: 3rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f8fafc;
+  color: #0d0c22;
+  transition: 0.5s ease;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+.input:focus,
+.input:hover {
+  outline: none;
+  border-color: rgba(129, 140, 248);
+  background-color: #fff;
+  box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+}
+
+.formulario {
+  display: flex;
+  gap: 5px;
+}
+.todoList button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #5b42f3 50%, #7259e4);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.todoList button:active,
+button:hover {
+  outline: 0;
+}
+
+.todoList button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.todoList button span:hover {
+  background-color: #443f9c;
+}
+
+.card-todo-list {
+  width: 100%;
+  gap: 20px;
+  display: none;
+  border-radius: 0.75em;
+  cursor: pointer;
+  padding : 15px;
+  margin: 10px;
+  transition: ease 0.2s;
+  box-shadow: 1em 1em 1em #d8dae0b1, -0.75em -0.75em 1em #ffffff;
+  border: 1.5px solid #f2f3f7;
+}
+.card-todo-list:hover {
+  background-color: #d3ddf1;
+  border: 1.5px solid #1677ff;
+}
+
+
+.formulario {
+    width: 100%;
+}
+
